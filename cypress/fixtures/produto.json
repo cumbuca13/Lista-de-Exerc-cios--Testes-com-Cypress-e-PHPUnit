@@ -1,0 +1,8 @@
+{
+  "nome": "Bolo de morango",
+  "categoria": "Bolos",
+  "descricao": "Massa branca, recheio de morango e chantilly.",
+  "preco": 95.5,
+  "estoque": 8,
+  "estoqueMinimo": 2
+}

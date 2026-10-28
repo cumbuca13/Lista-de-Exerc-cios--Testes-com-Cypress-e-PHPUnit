@@ -1,0 +1,9 @@
+@csrf
+<label>Nome<input name="name" value="{{ old('name',$product->name ?? '') }}" required data-cy="campo-nome">@error('name')<span class="error" data-cy="erro-nome">{{ $message }}</span>@enderror</label>
+<label>Categoria<select name="category" required data-cy="campo-categoria"><option value="">Selecione</option>@foreach(['Bolos','Doces','Salgados','Bebidas'] as $category)<option value="{{ $category }}" @selected(old('category',$product->category ?? '') === $category)>{{ $category }}</option>@endforeach</select>@error('category')<span class="error" data-cy="erro-categoria">{{ $message }}</span>@enderror</label>
+<label>Descrição<textarea name="description" data-cy="campo-descricao">{{ old('description',$product->description ?? '') }}</textarea>@error('description')<span class="error" data-cy="erro-descricao">{{ $message }}</span>@enderror</label>
+<label>Preço<input type="number" step="0.01" min="0" name="price" value="{{ old('price',$product->price ?? '') }}" required data-cy="campo-preco">@error('price')<span class="error" data-cy="erro-preco">{{ $message }}</span>@enderror</label>
+<label>Estoque atual<input type="number" min="0" name="stock" value="{{ old('stock',$product->stock ?? 0) }}" required data-cy="campo-estoque">@error('stock')<span class="error" data-cy="erro-estoque">{{ $message }}</span>@enderror</label>
+<label>Estoque mínimo<input type="number" min="0" name="minimum_stock" value="{{ old('minimum_stock',$product->minimum_stock ?? 5) }}" required data-cy="campo-estoque-minimo">@error('minimum_stock')<span class="error" data-cy="erro-estoque-minimo">{{ $message }}</span>@enderror</label>
+<label><input type="checkbox" name="active" value="1" @checked(old('active',$product->active ?? true)) data-cy="campo-ativo"> Produto ativo</label>
+<div class="actions"><button data-cy="btn-salvar">Salvar</button><a class="btn secondary" href="{{ route('produtos.index') }}" data-cy="btn-cancelar">Cancelar</a></div>

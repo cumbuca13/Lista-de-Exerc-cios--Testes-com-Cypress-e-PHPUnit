@@ -1,0 +1,1 @@
+@extends('layout') @section('content')<h1 data-cy="titulo-pagina">Novo pedido</h1><form method="POST" action="{{ route('pedidos.store') }}" data-cy="form-pedido">@include('orders.form')</form>@endsection

@@ -1,0 +1,1 @@
+@extends('layout') @section('content')<h1 data-cy="titulo-pagina">Editar produto</h1><form method="POST" action="{{ route('produtos.update',$product) }}" data-cy="form-produto">@method('PUT') @include('products.form')</form>@endsection

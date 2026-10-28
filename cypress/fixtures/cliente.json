@@ -1,0 +1,12 @@
+{
+  "nome": "Carla Mendes",
+  "email": "carla.mendes@example.com",
+  "telefone": "(11) 97777-3333",
+  "endereco": "Rua Augusta, 1500",
+  "cidade": "São Paulo",
+  "edicao": {
+    "telefone": "(11) 96666-4444",
+    "endereco": "Av. Paulista, 900",
+    "cidade": "Santo André"
+  }
+}
